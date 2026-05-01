@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FRAMAR Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+    <div class="logo-block">
+      <div class="logo-name">FRAMAR</div>
+      <div class="logo-sub">dashboard</div>
+    </div>
+
+    <div class="importante-block">
+      <div class="imp-header">IMPORTANTE,<br>NO OLVIDES</div>
+      <ul class="imp-list" id="impList"></ul>
+    </div>
+  </aside>
+
+  <!-- ===== LISTA DE TRABAJO ===== -->
+  <main class="main-content">
+    <h1 class="main-title">Lista &nbsp; de &nbsp; Trabajo</h1>
+    <div class="work-scroll">
+      <div id="workList"></div>
+    </div>
+  </main>
+
+  <!-- ===== RIGHT PANEL ===== -->
+  <div class="right-panel">
+
+    <!-- Calendar -->
+    <div class="cal-card">
+      <div class="cal-header">
+        <button class="cal-nav" id="btnPrev" onclick="calNav(-1)">&#8249;</button>
+        <div>
+          <div class="cal-month-label" id="calMonthLbl">MAYO</div>
+          <div class="cal-year-label" id="calYearLbl">2025</div>
+        </div>
+        <button class="cal-nav" id="btnNext" onclick="calNav(1)">&#8250;</button>
+      </div>
+      <div class="cal-grid" id="calGrid"></div>
+    </div>
+
+    <!-- Seguimiento -->
+    <div class="seg-card">
+      <div class="seg-row">
+        <span class="seg-lbl">TRABAJOS POR PRODUCIR</span>
+        <div class="seg-num np" id="cntProc">0</div>
+      </div>
+      <div class="seg-row">
+        <span class="seg-lbl">DISEÑOS POR HACER</span>
+        <div class="seg-num nh" id="cntHacer">0</div>
+      </div>
+      <div class="prox-item" id="prox1">PROXIMA TAREA 1</div>
+      <div class="prox-item" id="prox2">PROXIMA TAREA 2</div>
+      <div class="prox-item" id="prox3">PROXIMA TAREA 3</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="notif-bar" id="notifBar"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
